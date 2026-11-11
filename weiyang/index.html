@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>未央义卖 · 宣传方案交付索引</title>
+<style>
+:root{
+  --brand:#57A738; --dbrand:#3E8222; --lbrand:#8FCB6E; --palebrand:#F1F8EC;
+  --ink:#23261F; --sub:#5C6155; --line:#E4E8DE; --card:#FFFFFF;
+  --bg:#F7F8F4; --amber:#C98B52; --amberbg:#FAF6F0;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  background:var(--bg); color:var(--ink); line-height:1.75; font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px 80px}
+
+/* hero */
+.hero{
+  background:linear-gradient(135deg,var(--dbrand) 0%,var(--brand) 55%,#6FB84A 100%);
+  color:#fff; padding:56px 0 64px; margin-bottom:-32px; position:relative; overflow:hidden;
+}
+.hero::after{
+  content:""; position:absolute; right:-60px; bottom:-90px; width:320px; height:320px;
+  border-radius:50%; background:rgba(255,255,255,.09);
+}
+.hero-inner{position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:0 24px}
+.kicker{font-size:12px; letter-spacing:5px; opacity:.85; margin-bottom:14px}
+.hero h1{font-size:38px; font-weight:800; letter-spacing:1px; line-height:1.35; margin-bottom:14px}
+.hero .sub{font-size:16px; opacity:.94; max-width:720px}
+.meta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+.meta-chip{
+  background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
+  padding:7px 15px; border-radius:999px; font-size:13px;
+}
+.hero-cta{
+  display:inline-block; margin-top:24px; padding:13px 28px; border-radius:999px;
+  background:#B3211A; color:#fff; font-weight:700; font-size:16px; text-decoration:none;
+  box-shadow:0 10px 26px rgba(120,20,14,.32); transition:.18s;
+}
+.hero-cta:hover{background:#8E1913; transform:translateY(-1px)}
+.hero-cta.ghost{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.4); margin-left:10px; box-shadow:none}
+.hero-cta.ghost:hover{background:rgba(255,255,255,.24)}
+.card a.dl{color:var(--dbrand); font-weight:700; text-decoration:none; border-bottom:1px dashed var(--lbrand)}
+.card a.dl:hover{border-bottom-style:solid}
+
+/* nav */
+.quicknav{
+  position:relative; z-index:3; background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:22px 26px; margin-bottom:44px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px 26px;
+  box-shadow:0 6px 22px rgba(60,90,40,.07);
+}
+.quicknav a{
+  text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:flex-start;
+  padding:9px 12px; border-radius:9px; transition:.16s;
+}
+.quicknav a:hover{background:var(--palebrand); color:var(--dbrand)}
+.quicknav .n{
+  flex:0 0 24px; height:24px; line-height:24px; text-align:center; border-radius:7px;
+  background:var(--palebrand); color:var(--dbrand); font-weight:700; font-size:12px; margin-top:2px;
+}
+.quicknav .t{font-weight:600; font-size:14px}
+.quicknav .d{font-size:12.5px; color:var(--sub); line-height:1.5}
+
+/* section */
+section{margin-bottom:56px}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:8px}
+.sec-num{
+  font-size:13px; font-weight:800; color:var(--brand); letter-spacing:2px;
+  background:var(--palebrand); padding:4px 12px; border-radius:6px;
+}
+.sec-head h2{font-size:24px; font-weight:800; letter-spacing:.5px}
+.sec-desc{color:var(--sub); font-size:14px; margin-bottom:24px; max-width:840px}
+
+/* strategy */
+.strat{
+  background:var(--card); border:1px solid var(--line); border-left:4px solid var(--brand);
+  border-radius:var(--radius); padding:26px 30px; margin-bottom:22px;
+}
+.strat h3{font-size:19px; margin-bottom:10px; color:var(--dbrand)}
+.strat p{color:var(--sub); font-size:14.5px; margin-bottom:8px}
+.strat p:last-child{margin-bottom:0}
+.strat b{color:var(--ink)}
+
+/* cards */
+.grid{display:grid; gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:22px 24px; transition:.18s;
+}
+.card:hover{border-color:var(--lbrand); box-shadow:0 8px 26px rgba(60,90,40,.09)}
+.card h4{font-size:16.5px; font-weight:700; margin-bottom:8px; display:flex; align-items:center; gap:9px}
+.card h4 .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);flex:0 0 8px}
+.card p{font-size:13.5px; color:var(--sub); margin-bottom:10px}
+.card p:last-child{margin-bottom:0}
+.card code{
+  background:var(--palebrand); color:var(--dbrand); padding:1px 7px; border-radius:5px;
+  font-size:12.5px; font-family:ui-monospace,Menlo,Consolas,monospace;
+}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{
+  font-size:11.5px; background:var(--palebrand); color:var(--dbrand);
+  padding:3px 10px; border-radius:999px; border:1px solid #DDEDD2;
+}
+.tag.amber{background:var(--amberbg); color:#8a6034; border-color:#F0E1D0}
+
+/* posters */
+.poster-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px}
+.poster{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+.poster .ph{background:#EFF2EA; display:flex; align-items:center; justify-content:center; padding:12px; min-height:170px}
+.poster .ph img{max-width:100%; max-height:280px; border-radius:6px; box-shadow:0 4px 14px rgba(0,0,0,.1); display:block}
+.poster .info{padding:14px 16px 16px}
+.poster .info h5{font-size:14.5px; font-weight:700; margin-bottom:5px}
+.poster .info .sp{font-size:12px; color:var(--lbrand); font-family:ui-monospace,monospace; margin-bottom:7px}
+.poster .info p{font-size:12.5px; color:var(--sub); line-height:1.6}
+.poster .info .use{
+  margin-top:10px; font-size:11.5px; background:var(--palebrand); color:var(--dbrand);
+  padding:4px 9px; border-radius:6px; display:inline-block; font-weight:600;
+}
+
+/* timeline */
+.tl{position:relative; padding-left:0}
+.tl-item{
+  display:grid; grid-template-columns:118px 1fr; gap:22px; padding:20px 0;
+  border-top:1px dashed var(--line);
+}
+.tl-item:first-child{border-top:none}
+.tl-when{text-align:right; padding-top:2px}
+.tl-when .d{font-weight:800; color:var(--dbrand); font-size:16px; letter-spacing:.5px}
+.tl-when .s{font-size:11.5px; color:var(--sub)}
+.tl-body h4{font-size:15.5px; font-weight:700; margin-bottom:5px}
+.tl-body p{font-size:13.5px; color:var(--sub)}
+.tl-body .k{
+  display:inline-block; margin-top:8px; font-size:11.5px; font-weight:700;
+  background:var(--amberbg); color:#8a6034; border:1px solid #F0E1D0;
+  padding:3px 10px; border-radius:6px;
+}
+.tl-item.key{background:linear-gradient(90deg,var(--palebrand),transparent 60%); margin:0 -16px; padding:22px 16px; border-radius:10px; border-top:none}
+.tl-item.key .tl-when .d{color:var(--brand)}
+.tl-item.key .k{background:var(--brand); color:#fff; border-color:var(--brand)}
+
+/* team */
+.team{display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:14px}
+.tcard{
+  background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px;
+  border-top:3px solid var(--brand);
+}
+.tcard .id{
+  display:inline-flex; width:28px;height:28px; align-items:center;justify-content:center;
+  background:var(--brand); color:#fff; border-radius:8px; font-weight:800; font-size:14px; margin-bottom:10px;
+}
+.tcard h5{font-size:15px; font-weight:700; margin-bottom:6px}
+.tcard p{font-size:12.5px; color:var(--sub); line-height:1.65}
+.tcard .out{
+  margin-top:10px; font-size:11.5px; color:var(--dbrand); background:var(--palebrand);
+  padding:4px 9px; border-radius:6px; display:inline-block;
+}
+
+/* table */
+table{width:100%; border-collapse:collapse; background:var(--card); border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); font-size:13.5px}
+th{background:var(--palebrand); color:var(--dbrand); text-align:left; padding:12px 15px; font-weight:700; font-size:13px; border-bottom:1px solid var(--line)}
+td{padding:12px 15px; border-bottom:1px solid #F0F2EC; color:var(--sub); vertical-align:top}
+tr:last-child td{border-bottom:none}
+td b{color:var(--ink)}
+td code{background:var(--palebrand); color:var(--dbrand); padding:1px 6px; border-radius:5px; font-size:12.5px; font-family:ui-monospace,monospace}
+
+/* steps */
+.steps{counter-reset:s; display:grid; gap:12px}
+.step{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:16px 20px 16px 58px; position:relative; font-size:14px;
+}
+.step::before{
+  counter-increment:s; content:counter(s); position:absolute; left:18px; top:16px;
+  width:26px;height:26px; line-height:26px; text-align:center; border-radius:50%;
+  background:var(--brand); color:#fff; font-weight:800; font-size:13px;
+}
+.step b{color:var(--ink)}
+.step span{color:var(--sub); font-size:13.5px}
+
+/* callout */
+.callout{
+  background:var(--amberbg); border:1px solid #F0E1D0; border-left:4px solid var(--amber);
+  border-radius:12px; padding:18px 22px; font-size:14px; color:#5a4f45;
+}
+.callout b{color:#8a6034}
+.callout ul{margin:8px 0 0 18px}
+.callout li{margin-bottom:5px}
+.callout li:last-child{margin-bottom:0}
+
+footer{
+  border-top:1px solid var(--line); padding-top:26px; color:var(--sub); font-size:13px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+@media(max-width:700px){
+  .hero h1{font-size:27px}
+  .tl-item{grid-template-columns:1fr; gap:10px}
+  .tl-when{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="kicker">电子科技大学 · 未央爱心教育团队</div>
+    <h1>宽窄巷子爱心义卖 · 宣传方案</h1>
+    <p class="sub">从悬念蓄水到收支公示，五阶段内容日历 + 6 人摄影组执行体系 + 6 张成品海报 + 四平台全流程文案库，一次性初始化完毕。</p>
+    <div class="meta-row">
+      <span class="meta-chip">活动日 2026-05-02（周六）9:30–20:00</span>
+      <span class="meta-chip">成都 · 宽窄巷子</span>
+      <span class="meta-chip">队伍 45 人</span>
+      <span class="meta-chip">6 人摄影组</span>
+      <span class="meta-chip">4 个平台</span>
+      <span class="meta-chip">6 张成品海报</span>
+      <span class="meta-chip">35 项荣誉背书</span>
+    </div>
+    <div>
+      <a class="hero-cta" href="post/">查看公众号推文成稿 →</a>
+      <a class="hero-cta ghost" href="#posters">看 6 张海报</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <nav class="quicknav">
+    <a href="#strategy"><span class="n">01</span><span><span class="t">战略与渠道</span><br><span class="d">为什么这样排兵布阵</span></span></a>
+    <a href="#calendar"><span class="n">02</span><span><span class="t">五阶段内容日历</span><br><span class="d">D-14 到 D+7 全排期</span></span></a>
+    <a href="#posters"><span class="n">03</span><span><span class="t">5 张成品海报</span><br><span class="d">预览与使用场景</span></span></a>
+    <a href="#team"><span class="n">04</span><span><span class="t">6 人摄影组</span><br><span class="d">分工与当日脚本</span></span></a>
+    <a href="#copy"><span class="n">05</span><span><span class="t">文案库与推文</span><br><span class="d">四平台逐条可发</span></span></a>
+    <a href="#kpi"><span class="n">06</span><span><span class="t">KPI 与风险预案</span><br><span class="d">指标、归因、兜底</span></span></a>
+    <a href="#howto"><span class="n">07</span><span><span class="t">怎么用这些物料</span><br><span class="d">从今天起的三步</span></span></a>
+  </nav>
+
+  <section id="strategy">
+    <div class="sec-head"><span class="sec-num">01</span><h2>战略与渠道</h2></div>
+    <p class="sec-desc">宣传组要解决的是三个独立的传播难题，不是笼统地"多发内容"。下面的每一个动作，都指向其中之一。</p>
+
+    <div class="strat">
+      <h3>一句话战略：官方推文只有一次，这是最贵的资源</h3>
+      <p>宽窄巷子官方平台提供的 <b>1 次推文 + logo 使用授权</b>，是整个活动里唯一不可再生的外部流量。所有平台、所有内容、所有节奏，都只为两件事服务：</p>
+      <p><b>1. 把那一天的人流导进我们的摊位</b>　　<b>2. 把这一次的现场，变成能持续发很久的内容</b></p>
+      <p>围绕这两件事，其余都是执行。</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4><span class="dot"></span>问题一：不知道有这场活动</h4>
+        <p>义卖在宽窄巷子，对校外人群完全陌生。</p>
+        <p><b>对策</b>：悬念期先造势（D-14 起），再用官方推文一次性引爆（D-3）。</p>
+        <div class="tagrow"><span class="tag">悬念海报</span><span class="tag">15s 短视频</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>问题二：知道但不感兴趣</h4>
+        <p>"又是卖东西做公益"。口号对路人无效。</p>
+        <p><b>对策</b>：不用口号，用具体的物品和场景——一本书、一个发圈、一张手写卡片。</p>
+        <div class="tagrow"><span class="tag">小红书图文</span><span class="tag">物品特写</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>问题三：感兴趣但不信</h4>
+        <p>怀疑是学生自嗨、怀疑钱说不清。</p>
+        <p><b>对策</b>：四重确定性——官方推文授权 + 团委盖章 + <b>24h 内公示收支</b> + <b>35 项公开可查的团队荣誉</b>。</p>
+        <p>前三条担保的是<strong>平台、流程和钱</strong>；第四条担保的是<strong>「你们是谁」</strong>——官方推文里不会出现我们的名字，这是它结构上补不了的洞。</p>
+        <div class="tagrow"><span class="tag">公示海报</span><span class="tag">荣誉墙海报</span><span class="tag amber">信任支点</span></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;margin:26px 0 12px">四平台分工（不是重复发布）</h3>
+    <table>
+      <tr><th style="width:130px">平台</th><th>它负责讲什么</th><th style="width:150px">内容形式</th><th style="width:110px">优先级</th></tr>
+      <tr><td><b>小红书</b><br><span style="font-size:12px">42779055768</span></td><td>细节——那本书、那个发圈、那张手写卡片</td><td>图文 6–9 图</td><td><span class="tag">P0</span></td></tr>
+      <tr><td><b>抖音</b><br><span style="font-size:12px">96000730581</span></td><td>过程——怎么摆的、人流多炸、巡游队进巷</td><td>15–30s 竖版</td><td><span class="tag">P0</span></td></tr>
+      <tr><td><b>公众号</b><br><span style="font-size:12px">未央支教队</span></td><td>结论——招募、公示、复盘、钱花在了哪里</td><td>长图文</td><td><span class="tag">P0</span></td></tr>
+      <tr><td><b>社群 / 朋友圈</b></td><td>转化——直接触达，零距离把人拉进群</td><td>图文 + 消息</td><td><span class="tag">P0</span></td></tr>
+      <tr><td><b>宽窄巷子官方</b></td><td>背书与引流峰值</td><td>1 次推文（借力）</td><td><span class="tag">P0</span></td></tr>
+      <tr><td><b>B站 / 校方</b></td><td>记录与沉淀，长尾复利</td><td>5–8min 记录片</td><td><span class="tag">P1</span></td></tr>
+    </table>
+  </section>
+
+  <section id="calendar">
+    <div class="sec-head"><span class="sec-num">02</span><h2>五阶段内容日历</h2></div>
+    <p class="sec-desc">以活动日 D-Day = 5 月 2 日为基准。完整版见《宣传方案.md》第三章；此处是执行视图。</p>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-when"><div class="d">D-14 → D-8</div><div class="s">悬念蓄水</div></div>
+        <div class="tl-body">
+          <h4>先让人好奇，再让人知道</h4>
+          <p>小红书「我有一件想卖掉的旧物」起手 → 抖音「要摆摊了」建立画面 → 朋友圈预告 → 小红书「义卖卖什么」清单 → <b>D-8 社群义卖队招新</b>。</p>
+          <span class="k">成败标准：D-8 时 45 人满员，且每个摊位有明确物品清单</span>
+        </div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-when"><div class="d">D-7 → D-3</div><div class="s">官方推文引爆</div></div>
+        <div class="tl-body">
+          <h4>整个传播的胜负手</h4>
+          <p>D-7 公众号主推文（招募）→ D-5 幕后准备 → <b>D-4 提交官方素材包</b>（队徽 PNG + 主视觉海报 + 活动信息 + 配文初稿）→ <b>D-3 官方推文发布</b>，2 小时内抖音、小红书、社群三线同步承接。</p>
+          <span class="k">让刷到推文的人，在任何平台都能再次遇到我们</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><div class="d">D-2 → D-1</div><div class="s">临门催场</div></div>
+        <div class="tl-body">
+          <h4>降低参与门槛，确认到场</h4>
+          <p>朋友圈三版倒计时 → 小红书「带什么来」清单（物品 + 水 + 遮阳帽）→ 抖音「明天见」→ 社群明日出发公告（含集合点）→ 小红书「摊位准备就绪」。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><div class="d">D-Day</div><div class="s">活动当天</div></div>
+        <div class="tl-body">
+          <h4>每 2 小时一条，热度不衰减</h4>
+          <p>9:00 布场 → 9:30 开摊 → 全天三班高峰连续跟拍 → 18:00 清仓冲刺 → 20:00 账目清点。当日发布节奏见《社媒文案库》。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><div class="d">D+1 → D+7</div><div class="s">长尾结算</div></div>
+        <div class="tl-body">
+          <h4>一次活动，撑起三个月素材</h4>
+          <p>D+1 公众号战报 + 收支公示（信任闭环）→ 小红书「卖光了」情绪峰值 → D+2 致谢篇（不卖东西）→ D+3 抖音 30s 混剪 → D+5 复盘 + B站记录片 → D+7「钱花在了哪里」深度闭环 → D+7 社群下一届意向登记。</p>
+          <span class="k">长尾才是义卖宣传的真正价值</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="posters">
+    <div class="sec-head"><span class="sec-num">03</span><h2>6 张成品海报</h2></div>
+    <p class="sec-desc">统一主色 #57A738（取自队徽），已按各平台规格出图，可直接上传。</p>
+
+    <div class="poster-grid">
+      <div class="poster">
+        <div class="ph"><img src="海报/01_主视觉海报.png" alt="主视觉海报"></div>
+        <div class="info">
+          <h5>01 主视觉海报</h5><div class="sp">1080 × 1440 · 竖版</div>
+          <p>活动主 KV，所有平台的通用主图。</p>
+          <span class="use">D-7 起 · 全平台通用</span>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="ph"><img src="海报/02_预热悬念海报.png" alt="预热悬念海报"></div>
+        <div class="info">
+          <h5>02 预热悬念海报</h5><div class="sp">1080 × 1080 · 方版</div>
+          <p>悬念期预热，含抖音码 + 小红书码双码引导。</p>
+          <span class="use">D-14 · 公众号尾部</span>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="ph"><img src="海报/03_推文封面.png" alt="推文封面"></div>
+        <div class="info">
+          <h5>03 推文封面</h5><div class="sp">900 × 383 · 横版</div>
+          <p>公众号封面 / B站封面。</p>
+          <span class="use">D-7 · 公众号 / B站</span>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="ph"><img src="海报/04_收支公示海报.png" alt="收支公示海报"></div>
+        <div class="info">
+          <h5>04 收支公示海报</h5><div class="sp">1080 × 1440 · 竖版</div>
+          <p>活动后公示，配 D+1 战报发出。</p>
+          <span class="use">D+1 · 信任闭环</span>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="ph"><img src="海报/05_现场打卡立牌.png" alt="现场打卡立牌"></div>
+        <div class="info">
+          <h5>05 现场打卡立牌</h5><div class="sp">1080 × 1620 · 竖版</div>
+          <p>现场合影区，UGC 引擎——路人合影是唯一能带来自然流量的素材。</p>
+          <span class="use">D-Day · 现场物料</span>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="ph"><img src="海报/06_团队荣誉墙海报.png" alt="团队荣誉墙海报"></div>
+        <div class="info">
+          <h5>06 团队荣誉墙海报</h5><div class="sp">1080 × 1440 · 竖版</div>
+          <p>35 项可查证荣誉 + 6 年时间轴，信任背书——已嵌入公众号推文「我们是谁」一章。</p>
+          <span class="use">D-7 起 · 预热与答疑</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card">
+        <h4><span class="dot"></span>荣誉素材（信任背书）</h4>
+        <p><code>素材/荣誉/</code> 内含 7 张原始照片：榜样 100 榜单发布、获奖名单公示、Movers4Climate 合作合影、荣誉证书、支教现场手工课、台上致辞、媒体推送截图。</p>
+        <p><b>用法</b>：推文「我们是谁」章已嵌荣誉数据卡，「钱去哪了」章已嵌支教现场，「活动掠影」章横滚区已嵌榜单 + 公示 + 合影。剩余可作小红书笔记封面、答疑群图、现场证书摆拍、答辩佐证。</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>为什么荣誉要进推文</h4>
+        <p>「把钱交给谁」是义卖最大的疑虑。宽窄巷子官方推文只能担保<strong>平台</strong>，不能担保<strong>我们</strong>。</p>
+        <p>荣誉墙提供的是可被第三方核验的履历：知行计划 TOP100 连续 5 年、榜样 100 全国大学生最佳社团、三下乡全国重点团队。<strong>比「我们是热心同学」有效一百倍</strong>。</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card">
+        <h4><span class="dot"></span>品牌素材（官方推文素材包）</h4>
+        <p><code>素材/队徽.png</code> 透明底 PNG，即 logo 使用授权文件。</p>
+        <p><code>素材/抖音码.png</code> 抖音小程序码（已圆形裁切）。<code>素材/小红书码.png</code> 小红书二维码。</p>
+        <p><b>D-4 前备齐</b>：队徽 PNG + 主视觉海报 + 活动信息 + 配文初稿，提交宽窄巷子方。</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>可重生成</h4>
+        <p>全部海报由 <code>build_posters.py</code> 直接绘制生成，改颜色、文案、尺寸后重跑即可，不用求人改图。</p>
+        <div class="tagrow"><span class="tag">PIL</span><span class="tag">Noto Sans CJK SC</span><span class="tag">零浏览器依赖</span></div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card">
+        <h4><span class="dot"></span>印刷物料（送厂用）</h4>
+        <p><code>印刷物料/</code> —— 按印刷标准出图：海报 A2 竖版 426×600mm、公益展板 A3 横版 426×303mm、泡沫板立牌 606×906mm 展开图。</p>
+        <p>全部 3mm 出血、300dpi（立牌 200dpi），安全边距实测 ≥5mm，文字包围盒 0 处重叠。</p>
+        <p><a class="dl" href="立牌/立牌_效果图_1400x2100.png">看立牌效果图</a>　·　<a class="dl" href="立牌/海报A_屏幕版.png">看海报 A 屏幕版</a></p>
+        <div class="tagrow"><span class="tag">含分层 PSD</span><span class="tag">含可编辑 SVG</span><span class="tag">含模切线</span><span class="tag">含工艺说明</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>送厂前必看</h4>
+        <p><code>立牌/印刷工艺说明.md</code> 已写清：出血规则、CMYK 转换该交给印厂而不是自己转、满版绿做实地、总墨量 ≤300%、最小字号。</p>
+        <p>立牌展开图上的<b>红色虚线是裁切线、蓝色虚线是出血线</b>，请勿自行删图，告知印厂按线裁切。</p>
+        <p><a class="dl" href="立牌/印刷工艺说明.md">下载工艺说明</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="sec-head"><span class="sec-num">04</span><h2>6 人摄影组</h2></div>
+    <p class="sec-desc">现场照片就是这次活动的唯一内容来源。这 6 个人不是"拍照的"，而是 D-Day 到 D+7 所有平台内容的<b>唯一生产者</b>。完整分钟级脚本见《摄影组执行手册》。</p>
+
+    <div class="team">
+      <div class="tcard"><span class="id">A</span><h5>组长 / 主摄</h5><p>活动负责人 + 关键镜头。空场全景、巷口人流对比、队伍合照。</p><span class="out">产出：官方主视觉图、推文头图</span></div>
+      <div class="tcard"><span class="id">B</span><h5>摊位特写</h5><p>2 号桌固定位。物品近景、手部付钱特写、售罄战果对比。</p><span class="out">产出：义卖过程、物品细节</span></div>
+      <div class="tcard"><span class="id">C</span><h5>巡游跟拍</h5><p>跟巡游义卖队。移动中的义卖场景、背影街拍，横竖双拍。</p><span class="out">产出：抖音短视频主力</span></div>
+      <div class="tcard"><span class="id">D</span><h5>人像组</h5><p>打卡点。路人合影、队员合影、用户 UGC，需主动邀请路人。</p><span class="out">产出：转发动机（自然流量）</span></div>
+      <div class="tcard"><span class="id">E</span><h5>物资物料</h5><p>场地侧。物资堆叠、摊位全景、准备瞬间、撤场收尾。</p><span class="out">产出：氛围与幕后感</span></div>
+      <div class="tcard"><span class="id">F</span><h5>数据记录</h5><p>机动 + 数据。扫码记录、账本、捐赠者付款瞬间、钱箱清点。</p><span class="out">产出：财务公示依据</span></div>
+    </div>
+
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h4><span class="dot"></span>三条设计原则</h4><p>① 摄影组<b>不承担义卖岗位</b>，专注拍摄；② <b>B 静 C 动</b>，静态出小红书、动态出抖音，素材不重复；③ <b>D 是转发动机</b>，路人合影必须主动邀请。</p></div>
+      <div class="card"><h4><span class="dot"></span>硬性交付节点</h4><p><b>17:30</b> 前完成初剪并交付到共享文件夹；<b>当晚 21:00</b> 前全员认领剪辑任务；<b>次日</b> 交付成片——这是赶上 D+1 发布窗口的唯一保障。</p></div>
+      <div class="card"><h4><span class="dot"></span>拍摄规范</h4><p>竖 9:16 / 横 16:9 各拍一张不后期裁；主体上下留 10% 空间；顺光不逆光；带出队徽强化品牌；<b>拍路人先征得同意</b>（硬性纪律）。</p></div>
+    </div>
+  </section>
+
+  <section id="copy">
+    <div class="sec-head"><span class="sec-num">05</span><h2>文案库与推文成稿</h2></div>
+    <p class="sec-desc">四平台全流程文案，逐条可发，不需要再从零想。</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4><span class="dot"></span>《社媒文案库.md》</h4>
+        <p>小红书 7 篇 + 抖音 8 条 + 公众号 3 篇 + 朋友圈 3 版 + 社群模板，覆盖悬念期 / 引爆期 / 催场期 / 当天 / 长尾五个阶段。</p>
+        <p>附<b>话题标签库</b>与<b>8 条发布纪律</b>（含发布时段、图文张数、@ 规则、不刷赞不注水等）。</p>
+        <p><a class="dl" href="推文/社媒文案库.md">下载《社媒文案库.md》</a></p>
+        <div class="tagrow"><span class="tag">可直接发</span><span class="tag">含标签库</span><span class="tag">含发布纪律</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>《摄影组执行手册.md》</h4>
+        <p>六人分工表、9:30–20:00 分钟级拍摄脚本、拍摄规范、当日素材交付目录树、素材二次利用规划表、7 条风险预案。</p>
+        <p><a class="dl" href="推文/摄影组执行手册.md">下载《摄影组执行手册.md》</a></p>
+        <div class="tagrow"><span class="tag">分钟级</span><span class="tag">含备份预案</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>《宣传方案（第七部分）.docx》</h4>
+        <p>策划案正文，直接复用队方模板样式（字号/行距/页边距全部继承）。</p>
+        <p>五个二级节：宣传目标 / 渠道与分工 / 传播节奏 / 现场联动 / 物料与风险，正文共 11 个三级标题。</p>
+        <div class="tagrow"><span class="tag">1.35 页</span><span class="tag">排版合规</span><span class="tag">可交评分</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>公众号主推文（已成稿）</h4>
+        <p><code>post/index.html</code> —— 可一键复制粘贴进公众号后台。</p>
+        <p><a class="dl" href="post/">→ 打开成稿预览（手机端效果）</a></p>
+        <p>五章节：未央爱心义卖 / 卖什么 / 钱去哪了 / 我们是谁 / 活动掠影。模块直接取自参考推文的真实 DOM——灯笼红条章节标、金框奶白卡、红标签、棕标签带三角箭头、橙框红字卡、横向滚动往期回顾、编辑｜初审｜复审｜终审页脚，全部行内样式。</p>
+        <div class="tagrow"><span class="tag">48817 字符</span><span class="tag">16 张配图</span><span class="tag">行内样式</span><span class="tag">390px 已验</span></div>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>《宣传方案.md》主文档</h4>
+        <p>八章完整版：战略 / 传播问题 / 渠道矩阵 / 内容日历 / 物料清单 / 摄影组 / KPI 与复盘 / 风险预案 / 我们不做的事。</p>
+        <p>附交付物索引树，可直接作为策划案附件。</p>
+        <p><a class="dl" href="宣传方案（第七部分）.docx">下载 Word 稿（1.35 页）</a>　·　<a class="dl" href="宣传方案.md">查看完整 Markdown</a></p>
+        <div class="tagrow"><span class="tag">八章</span><span class="tag">含风险预案</span></div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <b>三条发布铁律（写进纪律表，不可协商）</b>
+      <ul>
+        <li>同一件事，不同平台讲不同角度，<b>不要复制粘贴</b>。</li>
+        <li>发出去的数字必须是真的——不注水、不刷赞、不找水军。一次刷出来的数字会毁掉后面所有的公示。</li>
+        <li>不写绝对化用语。公益组织出一次合规问题，代价远大于收益。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kpi">
+    <div class="sec-head"><span class="sec-num">06</span><h2>KPI 与风险预案</h2></div>
+    <p class="sec-desc">每一阶段都有可查证的目标数字，避免"感觉还不错"式复盘。</p>
+
+    <table>
+      <tr><th style="width:110px">阶段</th><th style="width:120px">平台</th><th>指标</th><th style="width:170px">目标</th></tr>
+      <tr><td>预热</td><td>小红书</td><td>笔记阅读</td><td>单篇 ≥ 500</td></tr>
+      <tr><td>预热</td><td>全渠道</td><td>队伍满员率</td><td>45 / 45</td></tr>
+      <tr><td>引爆</td><td>公众号</td><td>主推文阅读</td><td>≥ 800</td></tr>
+      <tr><td>引爆</td><td>官方推文</td><td>阅读 / 互动</td><td>达到官方推文历史均值</td></tr>
+      <tr><td>引爆</td><td>社群</td><td>进群人数</td><td>≥ 120</td></tr>
+      <tr><td>当天</td><td>抖音</td><td>单条播放</td><td>≥ 1000</td></tr>
+      <tr><td>当天</td><td>小红书</td><td>现场笔记互动</td><td>≥ 60 赞</td></tr>
+      <tr><td>当天</td><td>线下</td><td>现场触达人次</td><td>≥ 800</td></tr>
+      <tr><td>长尾</td><td>公众号</td><td>战报阅读</td><td>≥ 600</td></tr>
+      <tr><td>长尾</td><td>全渠道</td><td>涨粉</td><td>+150</td></tr>
+    </table>
+
+    <h3 style="font-size:16px;margin:26px 0 12px">三条最高等级风险</h3>
+    <div class="grid g3">
+      <div class="card"><h4><span class="dot"></span>官方推文未获批准</h4><p>等级 <b>高</b>。D-4 提交后 24h 无回复即启动 B 案：改用校方公众号 + 本地媒体投稿。文案库已备 B 案通稿。</p></div>
+      <div class="card"><h4><span class="dot"></span>D-8 未满 45 人</h4><p>等级 <b>高</b>。降级方案：缩至 2 组共 28 人，摊位缩至 1 张桌，巡游队扩编。</p></div>
+      <div class="card"><h4><span class="dot"></span>活动日下雨</h4><p>等级 <b>高</b>。顺延至下一周末，社群统一通知，已报名人员不受影响。<b>摄影组改拍室内素材。</b></p></div>
+    </div>
+
+    <h3 style="font-size:16px;margin:26px 0 12px">必须沉淀的资产</h3>
+    <div class="callout">
+      活动结束后，以下内容可复用于招新、支教宣传、年度总结：
+      <ul>
+        <li>完整现场图库（≥150 张，分 A 类可用 / B 类存档）</li>
+        <li>短视频素材库（≥10 段）</li>
+        <li>收支公示与票据</li>
+        <li>复盘文档（做对 / 要改）</li>
+        <li>一份可复用的「线下义卖传播 SOP」</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="sec-head"><span class="sec-num">07</span><h2>怎么用这些物料</h2></div>
+    <p class="sec-desc">从今天（初始化）到活动日，按这三步推进。</p>
+
+    <div class="steps">
+      <div class="step">
+        <b>今天：把队伍补齐到 45 人</b><br>
+        <span>发《社媒文案库》里的「义卖队招新」到社群 + 朋友圈（D-8 那条），同步准备 5 张海报。宣传和招人是同一件事——<b>D-8 不满员，后面所有节奏都是空的</b>。</span>
+      </div>
+      <div class="step">
+        <b>D-7：发公众号主推文 + 提交官方素材包</b><br>
+        <span>打开 <code>weiyang-yimai-2026/index.html</code> → 点底部「一键复制」→ 粘贴到公众号后台 → 上传 <code>assets/cover.png</code> 作封面。D-4 前把队徽 PNG + 主视觉海报 + 活动信息 + 配文初稿提交宽窄巷子方。</span>
+      </div>
+      <div class="step">
+        <b>D-3 官方推文发布后 2 小时内：三线同步承接</b><br>
+        <span>抖音「官方号替我们发了」+ 小红书「官方推文已发」+ 社群链接催场。<b>这是整个传播的胜负手</b>，人已经来了，能不能留住人看这 2 小时。</span>
+      </div>
+      <div class="step">
+        <b>D-Day：摄影组按手册跑，物料 D-2 前定稿</b><br>
+        <span>6 人按 A–F 分工执行 13:00–17:00 脚本，17:30 前交初剪，21:00 前认领剪辑。<b>所有设计 D-2 前完成，D-1 只做微调，不做新设计。</b></span>
+      </div>
+      <div class="step">
+        <b>D+1：公示先行，24 小时内发出</b><br>
+        <span>公众号战报 + 收支公示海报同发，这是整个宣传的信任闭环。宁可数字不好看，也不能不公示。</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>电子科技大学未央爱心教育团队 · 宣传组</span>
+    <span>未央义卖宣传方案 · 初始化交付版 · 2026</span>
+  </footer>
+</div>
+
+</body>
+</html>
